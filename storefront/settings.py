@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -26,6 +29,8 @@ SECRET_KEY = '1^k^zw&jdgj_(qp8o^*35^9%31z265oj4ems2jgl9-%5)v9ym&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+CSRF_TRUSTED_ORIGINs = ["http://{{domain}}{ % url 'activate' uidb64 = uid token = token % }"]
 
 
 # Application definition
@@ -133,3 +138,17 @@ STATICFILES_DIRS = [
 # media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+
+# Email settings
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
