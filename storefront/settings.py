@@ -27,8 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = [
-    'http://storefront-env.eba-6g8qrx6r.us-west-2.elasticbeanstalk.com/']
+ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINs = ["http://{{domain}}{ % url 'activate' uidb64 = uid token = token % }"]
 
