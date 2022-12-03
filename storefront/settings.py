@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = [
-    ' django-storefront-env.eba-r4veak37.us-west-2.elasticbeanstalk.com']
+    'django-storefront-env.eba-r4veak37.us-west-2.elasticbeanstalk.com']
 
 CSRF_TRUSTED_ORIGINs = ["http://{{domain}}{ % url 'activate' uidb64 = uid token = token % }"]
 
