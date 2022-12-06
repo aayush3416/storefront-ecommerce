@@ -10,28 +10,9 @@ class RegistrationForm(forms.ModelForm):
         'placeholder': 'Confirm Password',
         'class': 'form-control'
     }))
-    # email = forms.EmailField(widget=forms.EmailInput(attrs={
-    #     'placeholder': 'Email',
-    #     'class': 'form-control'
-    # }))
     class Meta:
         model = Account
         fields = ['first_name', 'last_name', 'phone_number', 'email', 'password']
-        # widgets = {
-        #     'first_name': forms.TextInput(attrs={
-        #         'placeholder': 'First Name',
-        #         'class': 'form-control'
-        #     }),
-        #     'last_name': forms.TextInput(attrs={
-        #         'placeholder': 'Last Name',
-        #         'class': 'form-control'
-        #     }),
-        #     'phone_number': forms.TextInput(attrs={
-        #         'placeholder': 'Phone Number',
-        #         'class': 'form-control'
-        #     }),
-        # }
-
     def __init__(self,*args, **kwargs):
         super(RegistrationForm, self).__init__(*args, **kwargs)
         self.fields['first_name'].widget.attrs['placeholder'] = 'First Name'
