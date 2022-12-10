@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool)  # True
 
 ALLOWED_HOSTS = [
-    'django-storefront-env.eba-ys3de3me.us-west-2.elasticbeanstalk.com']
+    'storefront-env.eba-xz9bwhj2.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
