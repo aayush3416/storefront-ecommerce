@@ -1,5 +1,4 @@
 asgiref==3.5.2
-core==1.29.22
 certifi==2022.9.24
 Django==4.0
 django-admin-honeypot-updated-2021==1.2.0
