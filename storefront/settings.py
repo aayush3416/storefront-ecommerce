@@ -167,7 +167,7 @@ AWS_DEFAULT_ACL = None
 AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
-    'greatkart/static',
+    'storefront/static',
 ]
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
