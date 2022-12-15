@@ -20,8 +20,6 @@ StoreFront is an online ecommerce website where users can buy the most popular a
 Since COVID-19, the global surge in online buying has caused many e-commerce websites to work on enhancing their user experience in order to attract customers to continue shopping with them. I wanted to be able to build a website that consumers enjoy and combine all of the features seen in well-known companies such as Amazon. Hence, this led to the development of StoreFront.
 
 
-`
-
 ## Technologies
 - [`Django`](https://www.djangoproject.com/): Backend framework for setting up website and admin panel
 
